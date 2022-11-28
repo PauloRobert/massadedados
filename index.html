@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Gerador de Massa de Dados</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.4devs.com.br/css/frontoffice.077.css" />
+    <script src="js/script.js"></script>
+
+  </head>
+  <body>
+    <h1>Gerador de documentos validos...</h1>
+    <form name="form1" method="post" action="">
+      <label for="quatidade">Quantidade de documentos desejados:</label>
+      <input name="quantidade" id="quantidade" size="20" type="text" /><br />
+
+      <label for="resultado">Resultado:</label>
+      <textarea
+        name="resultado"
+        id="resultado"
+        disabled
+        class="result-area"
+      ></textarea>
+      <br />
+      Tipo:
+      <input name="tipo" value="cpf" checked="checked" type="radio" />
+      <label for="cpf">CPF</label>
+      <input name="tipo" value="cnpj" id="cnpj" type="radio" />
+      <label for="cnpf">CNPJ</label>
+      <input name="tipo" value="nit" id="nit" type="radio" />
+      <label for="nit">NIT</label>
+      <input name="tipo" value="cei" id="cei" type="radio" />
+      <label for="cei">CEI</label><br />
+      <input name="mascara" value="mascara" id="mascara" type="checkbox" />
+      <label for="mascara">Gerar com pontuação</label><br /><br />
+
+      <input name="button" value="Gerar" onclick="gera()" type="button" />
+      <input
+        name="button"
+        value="Gerar Txt*"
+        onclick="geraTxt()"
+        type="button"
+      />
+    </form>
+  </body>
+</html>
