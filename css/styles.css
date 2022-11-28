@@ -1,5 +1,8 @@
-body {
-    background-color: #a9a9a9;
+
+.body{
+    padding: 05px;
+    margin: 05px;
+
 }
 
 .result-area {
