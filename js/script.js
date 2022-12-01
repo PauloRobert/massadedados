@@ -284,7 +284,11 @@ function gera() {
                 .join("\n");
         } else if (document.form1.tipo[1].checked) {
             for (i = 0; i < quantidade_documento; i++) {
-                result.push(cnpj());
+                result.push(
+                    document.form1.mascara.checked
+                        ? cnpj().slice(0, 10)
+                        : cnpj().slice(0, 8)
+                );
             }
             document.form1.resultado.value = result
                 .toString()
